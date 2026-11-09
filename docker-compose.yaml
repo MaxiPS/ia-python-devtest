@@ -5,6 +5,9 @@ services:
       dockerfile: Dockerfile
     container_name: ia-app
     network_mode: "service:provider"
+    environment:
+      PROVIDER_BASE_URL: http://localhost:3001
+      PROVIDER_API_KEY: test-dev-2026
     depends_on:
       - provider
 
